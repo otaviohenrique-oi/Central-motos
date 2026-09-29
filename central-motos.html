@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Central Motos | Oficina Mecânica e Peças em Ampére PR</title>
+  <meta name="description" content="Oficina mecânica especializada e comércio de peças para motos no Centro de Ampére - PR. Nota 4.6 no Google. Agende pelo WhatsApp!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primaria: #e05a1f;
+      --apoio: #2b6ca3;
+      --fundo: #16181a;
+      --faixa: #21262a;
+      --tinta: #eef1f3;
+      --tinta-suave: #9fa8ae;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--fundo);
+      color: var(--tinta);
+      font-family: 'Barlow', sans-serif;
+      font-size: clamp(1rem, 1.1vw, 1.25rem);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Barlow Condensed', sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Utilitários */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      background-color: var(--fundo);
+      border-bottom: 2px solid var(--faixa);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 76px;
+    }
+
+    .logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--tinta);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo span {
+      color: var(--primaria);
+    }
+
+    .btn-whats-header {
+      background-color: var(--primaria);
+      color: var(--tinta);
+      padding: 10px 20px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border: 2px solid var(--primaria);
+      transition: background 0.2s, transform 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-whats-header:hover {
+      background-color: transparent;
+      color: var(--primaria);
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-block: clamp(5rem, 10vw, 9rem);
+      position: relative;
+      background: linear-gradient(135deg, var(--fundo) 0%, var(--faixa) 100%);
+      border-bottom: 2px solid var(--faixa);
+    }
+
+    .warning-stripes {
+      width: 100%;
+      height: 12px;
+      background: repeating-linear-gradient(
+        45deg,
+        var(--primaria),
+        var(--primaria) 15px,
+        var(--fundo) 15px,
+        var(--fundo) 30px
+      );
+      margin-bottom: 2rem;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background-color: var(--faixa);
+      border: 2px solid var(--primaria);
+      padding: 6px 14px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--tinta);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 7vw, 6rem);
+      line-height: 0.95;
+      margin-bottom: 1.5rem;
+      color: var(--tinta);
+    }
+
+    .hero h1 span {
+      color: var(--primaria);
+    }
+
+    .hero p {
+      color: var(--tinta-suave);
+      font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+      max-width: 650px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .btn-primary {
+      background-color: var(--primaria);
+      color: var(--tinta);
+      padding: 16px 32px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      border: 2px solid var(--primaria);
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover, .btn-primary:focus-visible {
+      background-color: transparent;
+      color: var(--primaria);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--tinta);
+      padding: 16px 32px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      border: 2px solid var(--tinta-suave);
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .btn-secondary:hover, .btn-secondary:focus-visible {
+      border-color: var(--tinta);
+      background-color: var(--faixa);
+    }
+
+    /* Faixa de Diferenciais */
+    .features-faixa {
+      background-color: var(--faixa);
+      padding-block: clamp(4rem, 8vw, 7rem);
+      border-bottom: 2px solid rgba(255,255,255,0.05);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    @media (min-width: 768px) {
+      .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .feature-card {
+      background-color: var(--fundo);
+      border: 2px solid rgba(255, 255, 255, 0.08);
+      padding: 32px;
+      position: relative;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background-color: var(--primaria);
+    }
+
+    .feature-card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+      color: var(--tinta);
+    }
+
+    .feature-card p {
+      color: var(--tinta-suave);
+      font-size: 1.05rem;
+    }
+
+    /* Seção Tabela OS (Serviços) */
+    .services-section {
+      padding-block: clamp(5rem, 10vw, 9rem);
+      background-color: var(--fundo);
+      border-bottom: 2px solid var(--faixa);
+    }
+
+    .section-title {
+      font-size: clamp(1.9rem, 4vw, 3.2rem);
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+
+    .section-title span {
+      color: var(--primaria);
+    }
+
+    .os-table-wrapper {
+      margin-top: 3rem;
+      border: 2px solid var(--faixa);
+      background-color: var(--faixa);
+      overflow-x: auto;
+    }
+
+    .os-header-bar {
+      background-color: var(--primaria);
+      color: var(--tinta);
+      padding: 12px 20px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .os-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    .os-table th, .os-table td {
+      padding: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .os-table th {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem;
+      color: var(--tinta-suave);
+      background-color: rgba(0,0,0,0.2);
+    }
+
+    .os-table td {
+      font-size: 1.1rem;
+    }
+
+    .os-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .os-table tr:hover td {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+
+    .service-code {
+      font-family: 'Barlow Condensed', sans-serif;
+      color: var(--primaria);
+      font-weight: 700;
+    }
+
+    /* Seção Centralizada / Avaliações e Info */
+    .info-section {
+      padding-block: clamp(5rem, 10vw, 9rem);
+      background-color: var(--fundo);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    @media (min-width: 900px) {
+      .info-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .info-box {
+      background-color: var(--faixa);
+      border: 2px solid rgba(255, 255, 255, 0.08);
+      padding: 40px;
+    }
+
+    .info-box h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--tinta);
+    }
+
+    .hours-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .hours-list li {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed rgba(255,255,255,0.1);
+      padding-bottom: 8px;
+      font-size: 1.1rem;
+    }
+
+    .hours-list span:last-child {
+      color: var(--primaria);
+      font-weight: 600;
+    }
+
+    .address-text {
+      color: var(--tinta-suave);
+      margin-bottom: 24px;
+      font-size: 1.1rem;
+    }
+
+    /* Depoimentos */
+    .testimonials-section {
+      background-color: var(--faixa);
+      padding-block: clamp(5rem, 10vw, 9rem);
+      border-top: 2px solid rgba(255,255,255,0.05);
+      border-bottom: 2px solid rgba(255,255,255,0.05);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-top: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .testimonial-card {
+      background-color: var(--fundo);
+      border: 2px solid rgba(255,255,255,0.08);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .testimonial-card p {
+      font-style: italic;
+      color: var(--tinta);
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+    }
+
+    .testimonial-author {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      color: var(--primaria);
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .google-badge {
+      font-size: 0.8rem;
+      background: rgba(255,255,255,0.05);
+      padding: 2px 6px;
+      color: var(--tinta-suave);
+      font-family: 'Barlow', sans-serif;
+      font-weight: 400;
+    }
+
+    /* Chamada Final */
+    .cta-final {
+      padding-block: clamp(5rem, 10vw, 9rem);
+      text-align: center;
+      background: linear-gradient(180deg, var(--fundo) 0%, var(--faixa) 100%);
+    }
+
+    .cta-final h2 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-final p {
+      color: var(--tinta-suave);
+      max-width: 600px;
+      margin: 0 auto 2.5rem auto;
+      font-size: 1.2rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--fundo);
+      border-top: 2px solid var(--faixa);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--tinta-suave);
+      font-size: 0.95rem;
+    }
+
+    footer p {
+      margin-bottom: 8px;
+    }
+
+    /* WhatsApp Flutuante Mobile */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: #fff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      z-index: 999;
+      transition: transform 0.2s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    @media (min-width: 768px) {
+      .whatsapp-float {
+        display: flex;
+      }
+    }
+
+    /* Animações simples ao rolar */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="logo">CENTRAL <span>MOTOS</span></a>
+      <a href="https://wa.me/5546999779839?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20na%20Central%20Motos." class="btn-whats-header" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448c-.63.35-6.31 1.708-6.31 1.708zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="warning-stripes"></div>
+    <div class="container hero-content reveal">
+      <div class="hero-badge">⭐ 4.6 ESTRELAS • 23 AVALIAÇÕES NO GOOGLE</div>
+      <h1>MECÂNICA DE CONFIANÇA NO <span>CENTRO DE AMPÉRE</span></h1>
+      <p>Serviço técnico especializado, manutenção preventiva e comércio de peças para manter sua moto rodando com segurança e potência.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/5546999779839?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20na%20Central%20Motos." class="btn-primary" target="_blank" rel="noopener">
+          Agendar pelo WhatsApp
+        </a>
+        <a href="tel:+5546999779839" class="btn-secondary">
+          Ligar (46) 99977-9839
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Faixa de Diferenciais -->
+  <section class="features-faixa">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <h3>Forte Reputação Local</h3>
+          <p>Média consolidada de 4.6 estrelas avaliada por quem confia e pilota pelas ruas da região.</p>
+        </div>
+        <div class="feature-card reveal">
+          <h3>Estrutura Inclusiva</h3>
+          <p>Espaço preparado com entrada acessível e vagas de estacionamento reservadas para cadeirantes.</p>
+        </div>
+        <div class="feature-card reveal">
+          <h3>Checkout Moderno</h3>
+          <p>Facilidade total no pagamento aceitando cartões de crédito, débito e aproximação por celular (NFC).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Tabela OS (Serviços) -->
+  <section class="services-section">
+    <div class="container">
+      <h2 class="section-title reveal">ORDEM DE SERVIÇO & <span>ESPECIALIDADES</span></h2>
+      <p style="color: var(--tinta-suave); max-width: 600px;">Trabalho direto, sem enrolação. Confira as soluções que oferecemos na nossa oficina mecânica.</p>
+      
+      <div class="os-table-wrapper reveal">
+        <div class="os-header-bar">
+          <span>CENTRAL MOTOS — TABELA DE ATUAÇÃO</span>
+          <span>SETOR TÉCNICO</span>
+        </div>
+        <table class="os-table">
+          <thead>
+            <tr>
+              <th>CÓD.</th>
+              <th>SERVIÇO / CATEGORIA</th>
+              <th>DESCRIÇÃO TÉCNICA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="service-code">OS-01</td>
+              <td><strong>Oficina Mecânica Geral</strong></td>
+              <td>Reparos mecânicos especializados e corretivos para motocicletas de diversas cilindradas.</td>
+            </tr>
+            <tr>
+              <td class="service-code">OS-02</td>
+              <td><strong>Manutenção Preventiva</strong></td>
+              <td>Serviços essenciais como troca de óleo e revisões periódicas recomendadas pelos fabricantes.</td>
+            </tr>
+            <tr>
+              <td class="service-code">OS-03</td>
+              <td><strong>Peças e Acessórios</strong></td>
+              <td>Comercialização de autopeças e componentes de reposição originais e paralelos de alta durabilidade.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-top: 2rem; color: var(--tinta-suave); font-size: 0.95rem;">
+        * Os preços variam de acordo com o modelo da motocicleta e complexidade do reparo. Entre em contato para um orçamento detalhado.
+      </div>
+    </div>
+  </section>
+
+  <!-- Informações e Horários -->
+  <section class="info-section">
+    <div class="container">
+      <div class="info-grid">
+        <div class="info-box reveal">
+          <h3>HORÁRIO DE FUNCIONAMENTO</h3>
+          <ul class="hours-list">
+            <li><span>Segunda a Sexta-feira</span> <span>08:00 – 18:00</span></li>
+            <li><span>Sábado</span> <span>08:00 – 11:00</span></li>
+            <li><span>Domingo</span> <span>Fechado</span></li>
+          </ul>
+          <p class="address-text"><strong>Endereço:</strong> R. Dona Leopoldina - Centro, Ampére - PR, 85640-000</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=R.%20Dona%20Leopoldina%20-%20Centro%2C%20Amp%C3%A9re%20-%20PR%2C%2085640-000" class="btn-secondary" target="_blank" rel="noopener" style="width: 100%; justify-content: center;">
+            Ver no Google Maps
+          </a>
+        </div>
+
+        <div class="info-box reveal" style="border-left: 4px solid var(--primaria);">
+          <h3>ATENDIMENTO RÁPIDO</h3>
+          <p style="color: var(--tinta-suave); margin-bottom: 24px;">Precisa trocar o óleo, fazer uma revisão rápida ou encomendar peças? Fale diretamente com nossa oficina pelo WhatsApp e agende seu atendimento sem fila de espera.</p>
+          <a href="https://wa.me/5546999779839?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20na%20Central%20Motos." class="btn-primary" target="_blank" rel="noopener" style="width: 100%; justify-content: center;">
+            Falar pelo WhatsApp Agora
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h2 class="section-title reveal" style="text-align: center;">O QUE DIZEM <span>NOSSOS CLIENTES</span></h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <p>“Ótimo atendimento,excelentes profissionais estão de parabéns..”</p>
+          <div class="testimonial-author">
+            Cleiton Silva
+            <span class="google-badge">via Google</span>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <p>“Local top ótimos profissionais. Vlw Titi abraço 🍻”</p>
+          <div class="testimonial-author">
+            Rudinei Ribeiro
+            <span class="google-badge">via Google</span>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <p>“Ótimo atendimento, mecânicos fazem um ótimo serviço.”</p>
+          <div class="testimonial-author">
+            Gato preto vira lata
+            <span class="google-badge">via Google</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chamada Final -->
+  <section class="cta-final">
+    <div class="container reveal">
+      <h2>SUA MOTO PRECISA DE MANUTENÇÃO?</h2>
+      <p>Garanta um serviço ágil, seguro e com profissionais qualificados no centro de Ampére - PR.</p>
+      <a href="https://wa.me/5546999779839?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20na%20Central%20Motos." class="btn-primary" target="_blank" rel="noopener">
+        Agendar Horário no WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>Central Motos</strong> — Oficina Mecânica e Peças</p>
+      <p>R. Dona Leopoldina - Centro, Ampére - PR, 85640-000</p>
+      <p style="margin-top: 20px; font-size: 0.85rem;">© Central Motos. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Flutuante -->
+  <a href="https://wa.me/5546999779839?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20na%20Central%20Motos." class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448c-.63.35-6.31 1.708-6.31 1.708zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </a>
+
+  <!-- Script Intersection Observer -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.reveal').forEach(element => {
+        observer.observe(element);
+      });
+    });
+  </script>
+</body>
+</html>
